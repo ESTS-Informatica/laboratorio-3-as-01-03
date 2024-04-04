@@ -22,14 +22,12 @@ public class GroundTransportation extends Transport
     }
 
     public void setLicensePlate(String licensePlate){
-        if(licensePlate != null){
-            this.licensePlate = licensePlate;
-        }
+        this.licensePlate = licensePlate;
     }
 
     @Override
     public String getTransportType(){
-        return "Transporte terrestre";
+        return "Transporte Terrestre";
     }
 
     @Override
@@ -37,7 +35,7 @@ public class GroundTransportation extends Transport
         final StringBuilder sb = new StringBuilder();
 
         sb.append(super.toString());
-        sb.append(String.format("%15s: %s\n", "Matrícula", this.licensePlate));
+        sb.append(String.format("%15s: %s\n", "Matricula", this.licensePlate));
 
         return sb.toString();
     }
