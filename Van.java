@@ -32,4 +32,9 @@ public class Van extends GroundTransportation
 
         return sb.toString();
     }
+    
+    @Override
+    public String getTransportType() {
+        return "Furgoneta";
+    }
 }

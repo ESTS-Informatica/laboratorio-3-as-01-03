@@ -43,4 +43,9 @@ public class Lorry extends GroundTransportation
 
         return sb.toString();
     }
+    
+    @Override
+    public String getTransportType() {
+        return "Camião";
+    }
 }
