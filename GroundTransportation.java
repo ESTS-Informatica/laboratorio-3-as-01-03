@@ -9,9 +9,20 @@ public class GroundTransportation extends Transport
 {
     private String licensePlate;
 
-    public GroundTransportation()
+    public GroundTransportation(String licensePlate)
     {
         super();
         setFees(3.0);
+        this.licensePlate = licensePlate;
+    }
+
+    public String getLicensePlate(){
+        return licensePlate;
+    }
+
+    public void setLicensePlate(String licensePlate){
+        if(licensePlate != null){
+            this.licensePlate = licensePlate;
+        }
     }
 }
