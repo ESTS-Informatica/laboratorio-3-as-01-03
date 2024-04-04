@@ -9,11 +9,12 @@ public class AirTransportation extends Transport
 {
     private String name;
     private int numberOfContainers;
+    private static final double FEES = 4.0;
 
     public AirTransportation(String name, int numberOfContainers)
     {
         super();
-        setFees(4.0);
+        setFees(FEES);
         this.name = name;
         this.numberOfContainers = numberOfContainers;
     }
@@ -34,5 +35,21 @@ public class AirTransportation extends Transport
 
     public void setNumberOfContainers(int numberOfContainers){
         this.numberOfContainers = numberOfContainers;
+    }
+
+    @Override
+    public String getTransportType(){
+        return "Transporte aéreo";
+    }
+
+    @Override
+    public String toString(){
+        final StringBuilder sb = new StringBuilder();
+
+        sb.append(super.toString());
+        sb.append(String.format("%15s: %s\n", "Nome", this.name));
+        sb.append(String.format("%15s: %s\n", "Número de contentores", this.numberOfContainers));
+
+        return sb.toString();
     }
 }
